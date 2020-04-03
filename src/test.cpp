@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
-#include "../include/Percolation.h"
-#include "../include/PercolationStats.h"
+#include "Percolation.h"
+#include "PercolationStats.h"
 
 TEST(PercolationStatsTests, Percolation10Trials1000)
 {
