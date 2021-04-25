@@ -6,7 +6,7 @@
 TEST(PercolationStatsTests, Percolation10Trials1000)
 {
     const size_t dimension = 10;
-    const size_t trials = 500;
+    const size_t trials = 1000;
     PercolationStats stats(dimension, trials);
 
     const double precision = 0.01;
