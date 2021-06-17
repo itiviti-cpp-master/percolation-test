@@ -131,17 +131,17 @@ TEST(PercolationTest, PercolationIsFullCheck)
     ASSERT_FALSE(percolation.is_full(1, 2));
     ASSERT_FALSE(percolation.has_percolation());
 
-    // 0 o x x
+    // 0 x o x
     // 1 o x o
     // 2 x x x
-    percolation.open(0, 0);
+    percolation.open(0, 1);
     ASSERT_TRUE(percolation.is_open(1, 0));
-    ASSERT_TRUE(percolation.is_full(1, 0));
+    ASSERT_FALSE(percolation.is_full(1, 0));
     ASSERT_TRUE(percolation.is_open(1, 2));
     ASSERT_FALSE(percolation.is_full(1, 2));
     ASSERT_FALSE(percolation.has_percolation());
 
-    // 0 o x x
+    // 0 x o x
     // 1 o o o
     // 2 x x x
     percolation.open(1, 1);
@@ -151,7 +151,7 @@ TEST(PercolationTest, PercolationIsFullCheck)
     ASSERT_TRUE(percolation.is_full(1, 2));
     ASSERT_FALSE(percolation.has_percolation());
 
-    // 0 o x x
+    // 0 x o x
     // 1 o o o
     // 2 x o x
     percolation.open(2, 1);
