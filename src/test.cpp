@@ -93,7 +93,7 @@ TEST(PercolationTest, Percolation3x3)
     percolation.open(1, 1);
     ASSERT_TRUE(percolation.is_open(1, 1));
     ASSERT_TRUE(percolation.has_percolation());
-    ASSERT_EQ(4, percolation.get_numbet_of_open_cells());
+    ASSERT_EQ(4, percolation.get_number_of_open_cells());
 }
 
 TEST(PercolationTest, PercolationIsFullCheck)
@@ -246,7 +246,7 @@ TEST(PercolationTest, Percolation5x5)
 TEST(PercolationTest, PercolationGetkNumbetCheck)
 {
     // check if open() works correct on already opened cell
-    // check if get_numbet_of_open_cells() works correct on full-open table
+    // check if get_number_of_open_cells() works correct on full-open table
     const size_t dimension = 3;
     Percolation percolation(dimension);
 
@@ -254,14 +254,14 @@ TEST(PercolationTest, PercolationGetkNumbetCheck)
         for (int j = 0; j < 3; j++) {
             const int col = i * 3 + j + 1;
             percolation.open(i, j);
-            ASSERT_EQ(col, percolation.get_numbet_of_open_cells());
+            ASSERT_EQ(col, percolation.get_number_of_open_cells());
             percolation.open(i, j);
-            ASSERT_EQ(col, percolation.get_numbet_of_open_cells());
+            ASSERT_EQ(col, percolation.get_number_of_open_cells());
         }
     }
-    ASSERT_EQ(9, percolation.get_numbet_of_open_cells());
+    ASSERT_EQ(9, percolation.get_number_of_open_cells());
     percolation.open(0, 0);
-    ASSERT_EQ(9, percolation.get_numbet_of_open_cells());
+    ASSERT_EQ(9, percolation.get_number_of_open_cells());
 }
 
 
